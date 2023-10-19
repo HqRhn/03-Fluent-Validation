@@ -5,7 +5,7 @@
 - It provides detailed error messages, which can be helpful for both developers during development and end-users when they encounter validation issues.
 
 
-**Implementing Fluent validation in NET 6 : **
+**Implementing Fluent validation in NET 6 :**
 
 Install Nuget packages : 
 - Install-Package FluentValidation
