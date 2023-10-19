@@ -21,10 +21,8 @@ namespace OrderManagementAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            services.AddValidatorsFromAssemblyContaining<GetOrderByReferenceValidator>(); 
-            services.AddFluentValidationAutoValidation(); 
-            services.AddFluentValidationClientsideAdapters();
+            services.AddFluentValidationAutoValidation();
+            services.AddScoped<IValidator<GetOrderByReferenceQuery>, GetOrderByReferenceValidator>();
 
             var applicationAssembly = typeof(OrderManagement.Application.AssemblyReference).Assembly;
 
